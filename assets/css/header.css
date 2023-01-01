@@ -1,0 +1,122 @@
+/*?  HEADER*/
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 8px hsla(0, 0%, 0%, .15);
+    background-color: white;
+    z-index: 100;
+}
+
+.nav{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+}
+
+.nav__logo{
+    display: flex;
+    column-gap: 6px;
+    align-items: center;
+}
+
+.nav__logo img{
+    width: 32px;
+}
+.nav__text{
+    font-weight: 700;
+}
+.nav__text span{
+    color: var(--colorPrimary);
+}
+
+.nav__toggle{
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+}
+
+/*? PARA EL MODO MÓVIL  */
+@media screen and (max-width:767px){
+    .nav__menu{
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100%;
+        padding: 80px 0 0 48px;
+        background-color: white;
+        box-shadow: -2px 0px 8px hsla(0, 0%, 0%, .15);
+        transition: right .4s;
+    }
+}
+
+.nav__list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+}
+
+.nav__link{
+    color: var(--colorBlack);
+    transition: color .3s;
+}
+
+.nav__link--Active{
+    color: var(--colorPrimary);
+}
+
+.nav__link:hover{
+    color: var(--colorHover);
+}
+
+.nav__buttons{
+    display: flex;
+    column-gap: 50px;
+    align-items: center;
+}
+
+.nav__button--link{
+    color: var(--colorBlack);
+}
+
+.nav__button--link:hover{
+    text-decoration: underline;
+}
+
+.nav__button{
+    background-color: var(--colorPrimary);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+.nav__close{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.show-menu{
+    right: 0;
+}
+
+.home__bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    object-fit: cover;
+}
+
+
+
+
+
+
